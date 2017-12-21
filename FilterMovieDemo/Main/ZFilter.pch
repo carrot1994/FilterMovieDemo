@@ -1,0 +1,40 @@
+//
+//  ZFilter.pch
+//  FilterMovieDemo
+//
+//  Created by 周恩慧 on 2017/12/19.
+//  Copyright © 2017年 周恩慧. All rights reserved.
+//
+
+#ifndef ZFilter_pch
+#define ZFilter_pch
+
+#import "UIView+Frame.h"
+#import "NSString+FontSize.h"
+#import <Masonry.h>
+#import <UIImageView+WebCache.h>
+
+
+
+#define SCREENW [UIScreen mainScreen].bounds.size.width
+#define SCREENH [UIScreen mainScreen].bounds.size.height
+
+#define IS_IPHONEX  (SCREENW  == 812.000000 || SCREENH == 812.000000)
+
+// TabBar高度
+#define kTabBarHeight      (IS_IPHONEX ? 83.0 : 49.0)
+// 导航栏高度
+#define kNaviBarHeight     44.0
+// 状态栏高度
+#define kStatusBarHeight   (IS_IPHONEX ? 44.0 : 20.0)
+// 顶部安全区域远离高度
+#define kTopBarSafeHeight  (IS_IPHONEX ? 44.0 : 0)
+// 底部安全区域远离高度
+#define kBottomSafeHeight  (IS_IPHONEX ? 34.0 : 0)
+
+#define kBottomHomeHeight  (IS_IPHONEX ? 21.0 : 0)
+// 状态栏和导航栏总高度
+#define kNavigationBarHeight   (kNaviBarHeight + kStatusBarHeight)
+
+
+#endif /* ZFilter_pch */
